@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amina & Omar — You're Invited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="format.css" />
+</head>
+<body>
+
+<div class="scene">
+
+  <!-- Ambient floating petals -->
+  <div class="petals" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="stage" id="stage">
+
+    <!-- ENVELOPE -->
+    <button class="envelope-wrap" id="envelopeWrap" aria-label="Open your wedding invitation">
+      <div class="envelope-flip" id="envelopeFlip">
+
+        <!-- INFO SIDE (shown first) -->
+        <div class="env-face env-face-info">
+          <div class="info-card">
+            <p class="info-eyebrow">You are warmly invited to</p>
+            <p class="info-names">Ismihan <span class="amp">&amp;</span> Rafay</p>
+            <div class="info-rule"></div>
+            <p class="info-date">October 4, 2026</p>
+            <p class="info-place">Ashyana Banquets</p>
+            <p class="info-place">1620 75th St, Downers Grove, IL 60516</p>
+            <span class="tap-hint">tap the envelope to open</span>
+          </div>
+        </div>
+
+        <!-- SEALED ENVELOPE SIDE -->
+        <div class="env-face env-face-seal">
+          <div class="envelope" id="envelope">
+            <div class="env-shadow"></div>
+            <div class="env-back"></div>
+
+            <div class="env-flap-left"></div>
+            <div class="env-flap-right"></div>
+            <div class="env-flap-top">
+              <div class="seal" id="seal">
+                <svg viewBox="0 0 60 60" class="seal-crack" aria-hidden="true">
+                  <path d="M30 6 L33 28 L52 30 L33 33 L30 54 L27 33 L8 30 L27 28 Z" />
+                </svg>
+                <span class="seal-letters">I&amp;R</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </button>
+
+    <!-- INVITATION -->
+    <section class="invitation" id="invitation" aria-hidden="true">
+      <div class="card">
+        <p class="eyebrow">Together with their families</p>
+
+        <h1 class="title">You're&nbsp;Invited</h1>
+
+        <div class="names">
+          <span>Ismihan</span>
+          <span class="amp">&amp;</span>
+          <span>Rafay</span>
+        </div>
+
+        <div class="divider"><span></span><i></i><span></span></div>
+
+        <p class="details">
+          request the honor of your presence<br>
+          as they celebrate their wedding
+        </p>
+
+        <div class="when-where">
+          <div class="line"><span class="label">Date</span><span class="value">Sunday, October 4, 2026</span></div>
+          <div class="line"><span class="label">Time</span><span class="value">5:00 pm</span></div>
+          <div class="line"><span class="label">Place</span><span class="value">Ashyana Banquets</span></div>
+        </div>
+
+        <div class="divider small"><span></span><i></i><span></span></div>
+
+        <form id="rsvpForm" novalidate>
+          <p class="rsvp-label">Kindly respond</p>
+
+          <div class="field">
+            <input type="text" id="familyName" placeholder=" " required autocomplete="name" />
+            <label for="familyName">Family name</label>
+          </div>
+
+          <div class="field">
+            <input type="number" id="peopleCount" placeholder=" " min="1" required />
+            <label for="peopleCount">Total attending (including form completer)</label>
+          </div>
+
+          <button type="submit" id="submitBtn">
+            <span class="btn-label">Submit RSVP</span>
+          </button>
+
+          <p id="message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="logic.js"></script>
+</body>
+</html>
