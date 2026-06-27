@@ -85,7 +85,7 @@ body {
   background: #8b6f47;
   opacity: 0.25;
   border-radius: 60% 0 60% 0;
-  animation: drift 16s linear infinite;
+  animation: drift 15s linear infinite;
 }
 
 .petals span:nth-child(1) { left: 8%;  animation-delay: 0s;   animation-duration: 18s; }
